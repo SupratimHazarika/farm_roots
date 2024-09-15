@@ -1,13 +1,13 @@
 import React from 'react'
 import { FaWhatsapp } from "react-icons/fa";
 
-const InformationBar = ({ content, color }) => {
+const InformationBar = ({ content, color, textColor, showLogo }) => {
   return (
-    <div className={`h-14 ${color} flex justify-center items-center text-black text-xl font-medium`} >
+    <div className={`h-14 ${color} flex justify-center items-center ${textColor} text-xl font-medium`} >
       {content}
-      <div className='text-xl ml-4 p-2 cursor-pointer bg-green-600 text-white rounded-md'>
+      {showLogo && <div className='text-xl ml-4 p-2 cursor-pointer bg-green-600 text-white rounded-md'>
         <FaWhatsapp />
-      </div>
+      </div>}
     </div>
   )
 }
